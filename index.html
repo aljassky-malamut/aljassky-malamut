@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Šteniatka aljašského malamuta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body {
+    font-family: "Lato", sans-serif
+  }
+
+  .mySlides {
+    display: none
+  }
+
+  p.ex1 {
+    font-size: 20px;
+  }
+
+  p.ex2 {
+    font-size: 30px;
+    color: black;
+    font-family: 'Trocchi', serif;
+  }
+
+  p.ex3 {
+    font-size: 40px;
+  }
+
+  p.ex4 {
+    font-size: 50px;
+  }
+
+  p.ex5 {
+    font-size: 60px;
+  }
+
+  h1 {
+    color: black;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0;
+  }
+
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .column img:hover {
+    opacity: 1;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+  }
+
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Domov</a>
+      <a href="#intro" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Úvod</a>
+      <a href="#parents" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Rodičia</a>
+      <a href="#previous" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Predošlé vrhy</a>
+      <a href="#actual" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Aktuálny vrh</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#intro" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Úvod</a>
+    <a href="#parents" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Rodičia</a>
+    <a href="#previous" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Predošlé vrhy</a>
+    <a href="#actual" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Aktuálny vrh</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Kontakt</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- Main image -->
+    <div class="mySlides w3-display-container w3-center">
+      <img src="images/uvodna.jpg" style="width:100%">
+      <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h1><b>Šteniatka aljašského malamuta</b></h1>
+        <p class="ex2"><b>Od tejto krásnej maminky</b></p>
+      </div>
+    </div>
+
+    <!-- The Intro Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="intro">
+      <h2 class="w3-wide">Vitajte!</h2>
+      <p class="ex2">Na tejto stránke si máte možnosť pozrieť fotografie oboch rodičov šteniatok, a taktiež aktuálne
+        fotky šteniatok.</p>
+      <p class="ex2">Sú to krásne, zdravé, čistokrvné šteniatka aljašského malamuta bez PP, narodené 9.02.2021.
+        Šteniatok je osem. Štyri fenky a štyria psy :) </p>
+      <p class="ex2">Šteniatko je na svoj nový domov pripravené už vo svojich šiestich týždňoch, teda od 23.3.2021, kedy
+        už bude trikrát odčervené, jedenkrát zaočkované a začipované s veterinárnym preukazom.
+        Vaše šteniatko si môžete prísť vybrať osobne alebo z fotografií, ktoré Vám poskytnem na e-mail. V prípade záujmu
+        alebo akýchkoľvek otázok ma neváhajte kontaktovať.</p>
+    </div>
+
+    <!-- The ParentsSection -->
+    <div id="parents">
+      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:500px">
+        <h2 class="w3-wide">Rodičia</h2>
+      </div>
+      <div class="w3-container w3-content w3-left" style="max-width:800px">
+        <p class="ex2"> Ahoj, volám sa Bella a som čistokrvná fenka aljašského malamuta. Mám 5 rokov a už dva úspešné a
+          zdravé vrhy šteniatok za sebou. Som starostlivá mamina a veľmi priateľská, najmä k deťom.</p>
+        <div class="w3-first">
+          <img src="images/rodicia/bella.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+          <img src="images/rodicia/bella2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+          <img src="images/rodicia/bella3.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+          <img src="images/rodicia/bella4.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+        </div>
+      </div>
+      <div class="w3-container w3-content w3-right" style="max-width:800px">
+        <p class="ex2"> Otec mojich šteniatok sa volá Miky. Je o rok mladší, ale za to dvakrát väčší ako ja. Všetky moje
+          predošlé šteniatka sú od neho. Je to samec mohutného vzrastu, taktiež veľmi priateľský a hravý.</p>
+
+
+        <div class="w3-first">
+          <img src="images/rodicia/miky.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+          <img src="images/rodicia/miky2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+          <img src="images/rodicia/miky4.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+          <img src="images/rodicia/miky3.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:40%">
+        </div>
+
+      </div>
+      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:500px">
+      </div>
+    </div>
+
+    <!-- The Previous Section -->
+    <div id="previous">
+      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:500px">
+        <h2 class="w3-wide">Predošlé vrhy</h2>
+        <p>* kliknutím na fotku ju zväčšíte</p>
+      </div>
+      <!-- The four columns -->
+      <div class="row">
+        <div class="column">
+          <img src="images/predosle_vrhy/1.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/2.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/3.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/4.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/5.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+
+        <div class="column">
+          <img src="images/predosle_vrhy/7.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/8.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/9.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/10.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/11.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/12.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/6.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
+        </div>
+      </div>
+      <!-- <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p style="text-align:center;"><img id="expandedImgActual" style="width:60%"></p>
+        <div id="imgtextActual" class="center"></div>
+      </div> -->
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImgPrevious" style="width:80%; text-align:center;">
+        <div id="imgtextPrevious"></div>
+      </div>
+    </div>
+
+    <!-- The Actual Section -->
+    <div id="actual">
+      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:500px">
+        <h2 class="w3-wide">Aktuálny vrh</h2>
+        <p>* kliknutím na fotku ju zväčšíte</p>
+      </div>
+      <!-- The four columns -->
+      <div class="row">
+        <div class="column">
+          <img src="images/aktualny_vrh/1.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/aktualny_vrh/2.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/aktualny_vrh/3.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/aktualny_vrh/4.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/aktualny_vrh/5.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+      </div>
+      <!-- <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p style="text-align:center;"><img id="expandedImgActual" style="width:60%"></p>
+        <div id="imgtextActual" class="center"></div>
+      </div> -->
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImgActual" style="width:70%; text-align:center;">
+        <div id="imgtextActual"></div>
+      </div>
+    </div>
+
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+      <h2 class="w3-wide w3-center">KONTAKT</h2>
+      <p class="w3-opacity w3-center"><i>Nebojte sa ma kontaktovať!</i></p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Dolná Mičiná, BB<br>
+          <i class="fa fa-phone" style="width:30px"></i> Telefón: +421 918 553 983<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: barbora.lukacova2@gmail.com<br>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- End Page Content -->
+  </div>
+
+  <!-- Image of location/map -->
+  <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunctionNavBar() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    // function myFunction(imgs) {
+    //   var expandImg = document.getElementById("expandedImgActual");
+    //   var imgText = document.getElementById("imgtextActual");
+    //   expandImg.src = imgs.src;
+    //   imgText.innerHTML = imgs.alt;
+    //   expandImg.parentElement.style.display = "block";
+    //   location.href = "#expandedImgActual";
+    // }
+    function myFunctionPrevious(imgs) {
+      var expandImg = document.getElementById("expandedImgPrevious");
+      var imgText = document.getElementById("imgtextPrevious");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+      location.href = "#expandedImgPrevious";
+    }
+    
+    function myFunctionActual(imgs) {
+      var expandImg = document.getElementById("expandedImgActual");
+      var imgText = document.getElementById("imgtextActual");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+      location.href = "#expandedImgActual";
+    }
+  </script>
+
+</body>
+
+</html>
